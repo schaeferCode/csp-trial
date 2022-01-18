@@ -43,5 +43,13 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    csp: {
+      hashAlgorithm: 'sha256',
+      addMeta: true,
+      policies: {
+        'script-src': [`'self'`],
+        'style-src': [`'unsafe-inline'`],
+      }
+    }
   }
 }
